@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        #in{width: 96%;background-color: #fff2f1;border-radius: 8px;padding: 8px 17px;font-size:13px;border: 1px solid #f5f0ef;color: #dccece}
+        #in:hover{text-decoration: none}.bt{background-color: #ff4133;border: 1px solid rgb(300, 200, 200)}form{margin-top: 70px}form >*{margin: 10px 0px}#forgot{margin: 0px -60px}#register{text-align: center}img{background-color: antiquewhite}.wlcm{font-size: 30px}.sp1{font-size: 5px}.sp1 >span{background-color: #f0c3be}
+        #item{
+            height: fit-content;
+        }
+        img{
+            border: 10px ;
+        }
+          #neubar {
+            background: #fae8d2;
+            box-shadow: 4px 6px 12px rgba(0,0,0,0.4)
+          }
+          
+          .nav-item .active {
+            border-radius: 6px;
+            background: linear-gradient(145deg, #ffe7ca, #f5d7b2);
+            box-shadow:  4px 4px 8px #ddc1a0,
+                         -4px -4px 8px #f7e5cc;
+          }
+          #neubar .dropdown-menu a:hover {
+            color: #454545
+          }
+          #neubar .nav-item {
+            margin : auto 4px;
+          }
+          #neubar a {
+          
+            padding-left:12px;
+            padding-right:12px;
+          }
+          #neubar .dropdown-menu {
+            background : #545454
+          }
+          a.navbar-brand {
+            color: #454545
+          }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
+    <div class="container">
+      <img src="https://i.pinimg.com/originals/dc/eb/a1/dceba180b9e931dd02c80557ba80f075.jpg"  height="50px" width="50px" style="border-radius: 50%;" />
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item">
+            <a class="nav-link mx-2 active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="/yieldpred">Yeild Prediction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="/city">Wather Forecast</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="container-fluid">
+        <h1 style="color: white; text-align: center">Crop Recomendation System </h1>
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-10 col-md-12 col-lg-11 col-xl-10">
+                <div class="card d-flex mx-auto my-5">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-12 col-xs-12 c1 p-5">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active"      data-bs-interval="2000">
+                                        <img src="https://media.istockphoto.com/id/622925154/photo/ripe-rice-in-the-field-of-farmland.jpg?s=612x612&w=0&k=20&c=grtA7L3dm_SP80Fdt-PpIwu5GYacZygErTDUDNIKHwY=" width="450px" height="400px">
+                                  </div>
+                                  <div class="carousel-item" data-bs-interval="2000">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqeKn4L05VAQ8HBnoidaAVwNkyB-7GZbDWUX1DbYGOrg&s" width="450px" height="400px">
+                                  </div>
+                                  <div class="carousel-item">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZkOng9xeX6W5TgFMmd8GvWQbv3O5GqwL1oQ&s" width="450px" height="400px">
+                                  </div>
+                                  <div class="carousel-item">
+                                </div>
+                                </div>
+                                
+                               
+                              </div>
+                        </div>
+                        <div class="col-md-7 col-sm-12 col-xs-12 c2 px-5 pt-5">
+                            <h3 style=" text-align: center">Enter Values: </h3>
+                            <form action="/details" method="POST">
+                                <input id="in" type="text" name="N" placeholder="Nitrogen" class="form-control">
+                                <input id="in" type="text" name="P" placeholder="Phosphorus" class="form-control">
+                                <input id="in" type="text" name="K" placeholder="Potassium" class="form-control">
+                                <input id="in" type="text" name="temperature" placeholder="Temprature" class="form-control">
+                                <input id="in" type="text" name="humidity" placeholder="Humidity" class="form-control">
+                                <input id="in" type="text" name="ph" placeholder="PH value" class="form-control">
+                                <input id="in" type="text" name="rainfall" placeholder="Rainfall" class="form-control">
+                                
+                        
+                                <button type="submit" class="btn btn-success" >Predict</button>
+                        
+                            </form>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card text-center">
+      <div class="card-header">
+        Recommended Crop: 
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{res}}</h5>
+      </div>
+      <div class="card-footer text-muted">
+       
+      </div>
+    </div>
+
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "8cf2497e-56e8-415d-b424-40c3555040c4", // The ID of this integration.
+        region: "us-south", // The region your integration is hosted in.
+        serviceInstanceID: "19bdd2dd-b611-4006-887c-f96afe199d81", // The ID of your service instance.
+        onLoad: async (instance) => { await instance.render(); }
+      };
+      setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>

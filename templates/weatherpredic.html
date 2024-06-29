@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body{
+            background-image: url("https://images.unsplash.com/photo-1558486012-817176f84c6d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2VhdGhlcnxlbnwwfHwwfHx8MA%3D%3D");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #neubar {
+          background: #fae8d2;
+          box-shadow: 4px 6px 12px rgba(0,0,0,0.4)
+        }
+        
+        .nav-item .active {
+          border-radius: 6px;
+          background: linear-gradient(145deg, #ffe7ca, #f5d7b2);
+          box-shadow:  4px 4px 8px #ddc1a0,
+                       -4px -4px 8px #f7e5cc;
+        }
+        #neubar .dropdown-menu a:hover {
+          color: #454545
+        }
+        #neubar .nav-item {
+          margin : auto 4px;
+        }
+        #neubar a {
+        
+          padding-left:12px;
+          padding-right:12px;
+        }
+        #neubar .dropdown-menu {
+          background : #545454
+        }
+        body, html {
+          height: 100%;
+        }
+        .form-container {
+          width: 100%;
+          max-width: 400px;
+          padding: 20px;
+          background-color: #fff;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm navbar-light" id="neubar">
+    <div class="container">
+      <img src="https://i.pinimg.com/originals/dc/eb/a1/dceba180b9e931dd02c80557ba80f075.jpg"  height="50px" width="50px" style="border-radius: 50%;" />
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item">
+            <a class="nav-link mx-2 active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="/yieldpred">Yeild Prediction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="/city">Wather Forecast</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="form-container">
+      <form action="/cityforecast" method="POST" class="form-inline">
+        <div class="mb-3">
+          <input type="text" class="form-control" id="cityName" name="city" placeholder="City Name" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Search</button>
+      </form>
+    </div>
+  </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+
+      <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "8cf2497e-56e8-415d-b424-40c3555040c4", // The ID of this integration.
+          region: "us-south", // The region your integration is hosted in.
+          serviceInstanceID: "19bdd2dd-b611-4006-887c-f96afe199d81", // The ID of your service instance.
+          onLoad: async (instance) => { await instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+</body>
+</html>
